@@ -180,6 +180,7 @@ const SingleRoom = () => {
         <div>
           <span>User:</span>
           <input
+          id="for-user"
             type="text"
             placeholder="User...."
             value={user}
