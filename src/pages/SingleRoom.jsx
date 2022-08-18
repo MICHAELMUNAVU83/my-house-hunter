@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { RoomContext } from "../context";
 import items from "../data";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { FcCheckmark } from "react-icons/fc";
 import { FaUserCircle } from "react-icons/fa";
 import { MdSaveAlt } from "react-icons/md";
@@ -24,35 +24,39 @@ const SingleRoom = () => {
   const [user, setUser] = useState("");
   const postComment = async (e) => {
     e.preventDefault();
-    const fetchcomment = await fetch(
-      "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/q5vdraFVP0OcZBooJBzd/comments",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          item_id: params.id,
-          username: user,
-          comment: comment,
-        }),
-      }
-    );
-    console.log(fetchcomment)
-    setUser(" ");
-    setComment(" ");
-    getComment();
+    if(user !== "" && comment!=='') {
+      // eslint-disable-next-line
+      const fetchcomment = await fetch(
+        "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xifUe7EQ0dq05NWWs6kK/comments",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            item_id: params.id,
+            username: user,
+            comment: comment,
+          }),
+        }
+      );
+      setUser("");
+      setComment("");
+      getComment();
+
+    }
+    
   };
   const getComment = async () => {
     const getcomment = await fetch(
-      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/q5vdraFVP0OcZBooJBzd/comments/?item_id=${params.id}`
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xifUe7EQ0dq05NWWs6kK/comments/?item_id=${params.id}`
     );
     const gotComment = await getcomment.json();
     setAllComments(gotComment);
   };
   useEffect(() => {
-    
-      getComment();
 
-    
+    getComment();
+
+
   });
 
   const detailsBanner = items.map(
@@ -180,7 +184,7 @@ const SingleRoom = () => {
         <div>
           <span>User:</span>
           <input
-          id="for-user"
+            id="for-user"
             type="text"
             placeholder="User...."
             value={user}
@@ -197,7 +201,7 @@ const SingleRoom = () => {
       </div>
     </div>
   );
- 
+
   const reviews =
     allComments.length > 0 &&
     allComments.map((each, index) => (
@@ -216,9 +220,9 @@ const SingleRoom = () => {
         </div>
       </div>
     ));
-    // eslint-disable-next-line
+  // eslint-disable-next-line
   const saveHouse = items.map((item) => {
-    if (item.item_id === params.id && savedClass === "save"){
+    if (item.item_id === params.id && savedClass === "save") {
       return (
         <div key={item.item_id} className="save-house-btn">
           <button
@@ -239,13 +243,13 @@ const SingleRoom = () => {
       );
 
     }
-   else if (item.item_id===params.id){
-     return(
-      
-      <div key={item.item_id} className="save-house-btn">
+    else if (item.item_id === params.id) {
+      return (
+
+        <div key={item.item_id} className="save-house-btn">
           <button
             type="button"
-           
+
           >
             {" "}
             <span>SAVED THIS HOUSE</span>{" "}
@@ -256,10 +260,10 @@ const SingleRoom = () => {
           </button>
         </div>
 
-     )
-     
-   }
-     
+      )
+
+    }
+
   });
 
   return (
