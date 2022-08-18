@@ -215,6 +215,7 @@ const SingleRoom = () => {
         </div>
       </div>
     ));
+    // eslint-disable-next-line
   const saveHouse = items.map((item) => {
     if (item.item_id === params.id && savedClass === "save"){
       return (
