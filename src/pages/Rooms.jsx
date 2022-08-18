@@ -16,6 +16,7 @@ const Rooms = () => {
   //   })
   //   // console.log()
   // },[])
+  // eslint-disable-next-line
   const rooms = items.map((ite) => {
     if (
       Number(selected) === Number(ite.capacity) &&
