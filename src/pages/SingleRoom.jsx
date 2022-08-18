@@ -25,7 +25,7 @@ const SingleRoom = () => {
   const postComment = async (e) => {
     e.preventDefault();
     const fetchcomment = await fetch(
-      "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UWjx9gCLF7qVtXnxcdP1/comments",
+      "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/q5vdraFVP0OcZBooJBzd/comments",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -43,7 +43,7 @@ const SingleRoom = () => {
   };
   const getComment = async () => {
     const getcomment = await fetch(
-      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UWjx9gCLF7qVtXnxcdP1/comments/?item_id=${params.id}`
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/q5vdraFVP0OcZBooJBzd/comments/?item_id=${params.id}`
     );
     const gotComment = await getcomment.json();
     setAllComments(gotComment);
@@ -198,7 +198,7 @@ const SingleRoom = () => {
     </div>
   );
  
-  const lala =
+  const reviews =
     allComments.length > 0 &&
     allComments.map((each, index) => (
       <div className="each-comment" key={index}>
@@ -224,7 +224,7 @@ const SingleRoom = () => {
           <button
             type="button"
             onClick={() => {
-              addCart(item);
+              addCart(item)
               setSavedClass("saved");
             }}
           >
@@ -269,7 +269,7 @@ const SingleRoom = () => {
       {saveHouse}
       {comments}
       <div className="comment-header">REVIEWS</div>
-      <div className="all-comments-div">{lala}</div>
+      <div className="all-comments-div">{reviews}</div>
     </div>
   );
 };

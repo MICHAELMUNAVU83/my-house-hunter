@@ -276,6 +276,7 @@
 .inputCommentsdiv .post-comment-div{
   display: flex;
   justify-content: center;
+  margin-top: 1%;
 }
 .inputCommentsdiv .postComment{
   background-color: #10294C;
@@ -288,8 +289,12 @@
   justify-content: center;
   width: 30%;
   font-size: 20px;
-  
 }
+.inputCommentsdiv .postComment:hover{
+  transform: scale(1.2, 1.2);
+
+}
+
 .all-comments-div{
   display: flex;
   flex-wrap: wrap;
@@ -397,6 +402,10 @@ footer .travelbuddy .buddy{
  -moz-border-radius: 0px;
  -ms-border-radius: 0px;
  -o-border-radius: 0px;
+}
+.save-house-btn button:hover{
+  transform: scale(1.2, 1.2);
+
 }
 .save-house-btn{
   align-items: center;
@@ -576,6 +585,10 @@ footer .travelbuddy .buddy{
   .inputCommentsdiv .postComment{
     width: 50%;
     padding: 5px;
+  }
+  .inputCommentsdiv .postComment:hover{
+    transform: scale(1.2, 1.2);
+  
   }
   .all-comments-div{
     margin-left: 1%;
