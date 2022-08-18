@@ -6,7 +6,6 @@
  margin-right: 2%;
  height: 100px;
  
-
 }
 .first-back{
   background-image: url("./images/details-4.jpeg");
@@ -28,7 +27,11 @@
   font-family: 'Allura', cursive;
 
 }
+.nav-bar{
 
+  background-color:white;
+  width: 100%;
+}
 .logo{
   height: 40px;
   width: 140px;
@@ -164,6 +167,7 @@
 }
 .extras ul{
   list-style: none;
+  font-family: 'Istok Web', sans-serif;
   display: flex;
   flex-wrap: wrap;
   flex-direction:row ;
@@ -437,7 +441,7 @@ footer .travelbuddy .buddy{
   font-family: 'Kdam Thmor Pro', sans-serif;
 
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   body{
     padding: 0;
     margin: 0;
@@ -475,20 +479,22 @@ footer .travelbuddy .buddy{
    width: 100%;
   }
   .description-info{
-    gap: 0.5rem;
-    font-size: 10px;
+    flex-direction: column;
+    font-size: 15px;
   }
   .description{
-    width: 50%;
-    margin-right: 10%;
+    width: 100%;
   }
   .info{
     margin-right: 0;
    
   }
+  .extras ul{
+    flex-direction: column;
+  }
   .extras ul > li{
-    font-size: 10px;
-    width: 30%;
+    font-size: 15px;
+    width: 90%;
     margin-bottom: 1%;
   }
   .details-banner-img{
@@ -511,9 +517,14 @@ footer .travelbuddy .buddy{
     margin-left: 1.5%;
     margin-bottom: 1%;
   }
+  .eachroom{
+    margin-bottom: 3%;
+    margin-right: 0;
+  }
  
   .eachroom .room-img{
     width: 100%;
+  
   }
   .filter-rooms-div{
     display: flex;
@@ -523,9 +534,14 @@ footer .travelbuddy .buddy{
     margin-bottom: 1%;
     width: 100%;
    }
+   .filter-rooms-div>div #amtOfPrice{
+    width: 70%;
+   }
+   .filter-rooms-div>div #actualLocation{
+    width: 85%;
+   }
    .filter-rooms-div>div>label{
     font-size: 10px;
-   
     
   }
   .filter-rooms-div>div >select{
@@ -543,7 +559,7 @@ footer .travelbuddy .buddy{
     width: 100%;
   }
   .save-house-btn button{
-    padding:5px ;
+    padding:2px ;
   }
   .inputCommentsdiv .actualinputs{
     flex-direction: column;
@@ -553,6 +569,10 @@ footer .travelbuddy .buddy{
     margin-bottom: 0.5%;
     margin-top: 1%;
   }
+  .inputCommentsdiv .actualinputs >div #for-user{
+    width: 80%;
+  }
+
   .inputCommentsdiv .postComment{
     width: 50%;
     padding: 5px;

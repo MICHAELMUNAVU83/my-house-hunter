@@ -290,7 +290,7 @@ const Rooms = () => {
       <div>
         <label>Location:</label>
 
-        <select id="amtLocation" value={where} onChange={selectLocation}>
+        <select id="actualLocation" value={where} onChange={selectLocation}>
           <option value="">ALL LOCATIONS </option>
           <option value="Lavington">Lavington</option>
           <option value="Kileleshwa">KIleleshwa</option>
