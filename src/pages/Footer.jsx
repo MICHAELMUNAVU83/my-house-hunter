@@ -31,11 +31,11 @@ function Footer() {
             <span> <IoCallOutline/> </span> <span>0740769596 </span> <span>||</span> <span> < HiOutlineMailOpen/> </span> <span> michaelmunavu83@gmail.com</span>
         </div>
         <div className="social-icons">
-            <a href="https://www.linkedin.com/in/michael-munavu/"><AiFillLinkedin/> </a>
-            <a href="https://twitter.com/MichaelTrance1"><AiOutlineTwitter/> </a>
-            <a href="https://instagram.com/trance.07?igshid=YmMyMTA2M2Y=">< AiOutlineInstagram/> </a>
-            <a href="mailto: michaelmunavu83@gmail.com">< HiOutlineMailOpen/> </a>
-            <a href="https://wa.me/254740769596">< FaWhatsapp/> </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/michael-munavu/"><AiFillLinkedin/> </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/MichaelTrance1"><AiOutlineTwitter/> </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/trance.07?igshid=YmMyMTA2M2Y=">< AiOutlineInstagram/> </a>
+            <a target="_blank" rel="noopener noreferrer" href="mailto: michaelmunavu83@gmail.com">< HiOutlineMailOpen/> </a>
+            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/254740769596">< FaWhatsapp/> </a>
 
         
         </div>
