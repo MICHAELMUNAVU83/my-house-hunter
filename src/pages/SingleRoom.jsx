@@ -4,7 +4,7 @@ import items from "../data";
 import { useParams } from "react-router-dom";
 import { FcCheckmark } from "react-icons/fc";
 import { FaUserCircle } from "react-icons/fa";
-import { MdSaveAlt } from "react-icons/md";
+import { BsBookmarkCheckFill } from "react-icons/bs";
 import { GiSittingDog } from "react-icons/gi";
 import { TiTick } from "react-icons/ti";
 import { AiTwotoneStar, AiOutlineComment } from "react-icons/ai";
@@ -40,17 +40,24 @@ const SingleRoom = () => {
       );
       setUser("");
       setComment("");
-      getComment();
-
+      const getcomment = await fetch(
+        `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xifUe7EQ0dq05NWWs6kK/comments/?item_id=${params.id}`
+      );
+      const gotComment = await getcomment.json();
+      setAllComments(gotComment);
     }
     
   };
   const getComment = async () => {
-    const getcomment = await fetch(
-      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xifUe7EQ0dq05NWWs6kK/comments/?item_id=${params.id}`
-    );
-    const gotComment = await getcomment.json();
-    setAllComments(gotComment);
+    if(allComments.length===0){
+      const getcomment = await fetch(
+        `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xifUe7EQ0dq05NWWs6kK/comments/?item_id=${params.id}`
+      );
+      const gotComment = await getcomment.json();
+      setAllComments(gotComment);
+
+    }
+    
   };
   useEffect(() => {
 
@@ -236,7 +243,7 @@ const SingleRoom = () => {
             <span>SAVE HOUSE</span>{" "}
             <span className="save-icon">
               {" "}
-              <MdSaveAlt />{" "}
+              <BsBookmarkCheckFill />{" "}
             </span>
           </button>
         </div>
