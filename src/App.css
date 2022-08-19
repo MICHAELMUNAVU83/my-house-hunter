@@ -567,7 +567,8 @@ footer .travelbuddy .buddy{
     width: 100%;
   }
   .save-house-btn button{
-    width: 60%; 
+    width: 70%; 
+    padding: 5px;
   }
   .inputCommentsdiv .actualinputs{
     flex-direction: column;
