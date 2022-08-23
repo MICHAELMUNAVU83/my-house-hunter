@@ -51,7 +51,7 @@ function SavedHouses() {
                 <span>{save.name}</span>
               </div>
             </div>
-            <button id={save.item_id}>Remove</button>
+           
           </div>
 
         ))}

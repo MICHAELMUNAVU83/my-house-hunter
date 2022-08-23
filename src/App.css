@@ -178,30 +178,43 @@
   margin-bottom: 0.5%;
 
 }
-.details-banner-img{
-  height: 31rem;
-  width: 100%;
-  position: relative;
-  background-attachment: fixed;
-}
-.details-banner .backdetails{
-  position: absolute;
-  top: 8%;
-  font-size: 5rem;
+
+.details-banner{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2%;
+  margin-top: 1%
 }
 
-.details-banner-inner{
-  position: absolute;
-  top: 30%;
-  left: 15%;
+
+.details-banner video{
   width: 70%;
+  height: 22rem;
+  margin-right: 1%;
+  
+}
+.details-banner .details-image{
+  width: 75%;
+  
+}
+.details-banner .details-image img{
+  height: 22rem;
+  width: 100%;
+  position: relative;
+}
+.details-banner .details-image .details-banner-inner{
+  position: absolute;
+  top: 35%;
+  background-color: white;
   font-weight: bolder;
+  right: 10%;
+  font-size: 2rem;
+  width: 30%;
   text-align: center;
-  font-size: 70px;
   opacity: 70%;
   color: #10294C;
-  /* font-family: 'Lato', sans-serif; */
-  background-color: white;
+
+
 }
 
 
@@ -505,19 +518,45 @@ footer .travelbuddy .buddy{
     width: 90%;
     margin-bottom: 1%;
   }
-  .details-banner-img{
+  .details-banner{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+    margin-top: 0;
+  }
+  .details-banner video{
     width: 100%;
-    height: 20rem;
+    height: 15rem;
+    margin-right: 0;
+    margin-bottom: 0;
+  
   }
-  .details-banner .backdetails{
-    font-size: 1rem;
-    top: 2%;
+  .details-banner .details-image{
+    width: 100%;
   }
-  .details-banner-inner{
-    font-size: 2rem;
-    top: 20%;
+  .details-banner .details-image img{
+    height: 15rem;
+    margin-top: 0;
+    
+  }
+  .details-banner .details-image .details-banner-inner{
+    position: absolute;
+    top: 45%;
+    background-color: white;
+    font-weight: bolder;
+    left: 5%;
+    font-size: 1.5rem;
+    width: 80%;
+    padding: 0;
+    text-align: center;
+    opacity: 70%;
+    color: #10294C;
+  
+  
+  }
 
-  }
+
+  
   .extra-image{
     width: 46%;
     height: 70%;
@@ -586,7 +625,7 @@ footer .travelbuddy .buddy{
     width: 50%;
     padding: 5px;
   }
-  .inputCommentsdiv .postComment:hover{
+  .inputCommentsdiv .postComment:focus{
    border-radius: 0;
   
   }

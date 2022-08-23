@@ -24,7 +24,7 @@ const SingleRoom = () => {
   const [user, setUser] = useState("");
   const postComment = async (e) => {
     e.preventDefault();
-    if(user !== "" && comment!=='') {
+    if (user !== "" && comment !== "") {
       // eslint-disable-next-line
       const fetchcomment = await fetch(
         "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xifUe7EQ0dq05NWWs6kK/comments",
@@ -46,39 +46,31 @@ const SingleRoom = () => {
       const gotComment = await getcomment.json();
       setAllComments(gotComment);
     }
-    
   };
   const getComment = async () => {
-    if(allComments.length===0){
+    if (allComments.length === 0) {
       const getcomment = await fetch(
         `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xifUe7EQ0dq05NWWs6kK/comments/?item_id=${params.id}`
       );
       const gotComment = await getcomment.json();
       setAllComments(gotComment);
-
     }
-    
   };
   useEffect(() => {
-
     getComment();
-
-
   });
 
   const detailsBanner = items.map(
     (item) =>
       item.item_id === params.id && (
         <div key={item.item_id} className="details-banner">
-          <img
-            className="details-banner-img"
-            src={item.images[3]}
-            key={item.item_id}
-            alt="details banner"
-          />
-          <div className="details-banner-inner">
-            <p>{item.name.toUpperCase()}</p>
-            <p className="details-line"></p>
+          <video src={item.video} autoPlay controls loop type="video/mp4" />
+          <div className="details-image">
+            <img src={item.images[0]} alt="item-official" />
+            <div className="details-banner-inner">
+              <p>{item.name.toUpperCase()}</p>
+
+            </div>
           </div>
         </div>
       )
@@ -235,7 +227,7 @@ const SingleRoom = () => {
           <button
             type="button"
             onClick={() => {
-              addCart(item)
+              addCart(item);
               setSavedClass("saved");
             }}
           >
@@ -248,16 +240,10 @@ const SingleRoom = () => {
           </button>
         </div>
       );
-
-    }
-    else if (item.item_id === params.id) {
+    } else if (item.item_id === params.id) {
       return (
-
         <div key={item.item_id} className="save-house-btn">
-          <button
-            type="button"
-
-          >
+          <button type="button">
             {" "}
             <span>SAVED THIS HOUSE</span>{" "}
             <span className="save-icon">
@@ -266,11 +252,8 @@ const SingleRoom = () => {
             </span>
           </button>
         </div>
-
-      )
-
+      );
     }
-
   });
 
   return (

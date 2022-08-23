@@ -14,6 +14,22 @@ import img9 from "./images/room-9.jpeg";
 import img10 from "./images/room-10.jpeg";
 import img11 from "./images/room-11.jpeg";
 import img12 from "./images/room-12.jpeg";
+import video1 from "./Videos/video1.mp4";
+import video2 from "./Videos/video2.mp4";
+import video3 from "./Videos/video3.mp4";
+import video4 from "./Videos/video4.mp4";
+import video5 from "./Videos/video5.mp4";
+import video6 from "./Videos/video6.mp4";
+import video7 from "./Videos/video7.mp4";
+import video8 from "./Videos/video8.mp4";
+import video9 from "./Videos/video9.mp4";
+import video10 from "./Videos/video10.mp4";
+import video11 from "./Videos/video11.mp4";
+import video12 from "./Videos/video12.mp4";
+import video13 from "./Videos/video13.mp4";
+import video14 from "./Videos/video14.mp4";
+import video15 from "./Videos/video15.mp4";
+
 
 const items = [
   {
@@ -22,6 +38,7 @@ const items = [
     location: "Lavington",
     name: "Lavington single economy",
     type: "single",
+    video:video9,
     price: 15000,
     size: 2500,
     capacity: 1,
@@ -46,6 +63,7 @@ const items = [
     location: "Kileleshwa",
     name: "Kileleshwa single economy",
     type: "single",
+    video:video4,
     price: 15000,
     size: 2500,
     capacity: 1,
@@ -72,6 +90,7 @@ const items = [
     type: "single",
     price: 15000,
     size: 2500,
+    video:video2,
     capacity: 1,
     pets: false,
     featured: false,
@@ -90,6 +109,7 @@ const items = [
   },
   {
     item_id: "4",
+    video:video3,
     saved: false,
     location: "Lavington",
     name: "Lavington single deluxe",
@@ -119,6 +139,7 @@ const items = [
     name: "Kileleshwa single deluxe",
     type: "single",
     price: 20000,
+    video:video5,
     size: 3500,
     capacity: 1,
     pets: false,
@@ -143,6 +164,7 @@ const items = [
     name: "Kilimani single deluxe",
     type: "single",
     price: 20000,
+    video:video6,
     size: 3500,
     capacity: 1,
     pets: false,
@@ -165,6 +187,7 @@ const items = [
     saved: false,
     location: "Lavington",
     name: "Lavington double economy",
+    video:video7,
     type: "double",
     price: 25000,
     size: 4000,
@@ -192,6 +215,7 @@ const items = [
     type: "double",
     price: 25000,
     size: 4000,
+    video:video8,
     capacity: 2,
     pets: false,
     featured: false,
@@ -211,6 +235,7 @@ const items = [
   {
     item_id: "9",
     saved: false,
+    video:video9,
     location: "Kilimani",
     name: "Kilimani double economy",
     type: "double",
@@ -235,6 +260,7 @@ const items = [
   {
     item_id: "10",
     saved: false,
+    video:video10,
     location: "Lavington",
     name: "Lavington double deluxe",
     type: "double",
@@ -263,6 +289,7 @@ const items = [
     name: "Kileleshwa double deluxe",
     type: "double",
     price: 30000,
+    video:video11,
     size: 4500,
     capacity: 2,
     pets: false,
@@ -283,6 +310,7 @@ const items = [
   {
     item_id: "12",
     saved: false,
+    video:video12,
     location: "Kilimani",
     name: "Kilimani double deluxe",
     type: "double",
@@ -312,6 +340,7 @@ const items = [
     type: "family",
     price: 35000,
     size: 5000,
+    video:video13,
     capacity: 3,
     pets: false,
     featured: false,
@@ -331,6 +360,7 @@ const items = [
   {
     item_id: "14",
     saved: false,
+    video:video14,
     location: "Kileleshwa",
     name: "Kileleshwa family economy",
     type: "family",
@@ -359,6 +389,7 @@ const items = [
     name: "Kilimani family economy",
     type: "family",
     price: 35000,
+    video:video15,
     size: 5000,
     capacity: 3,
     pets: false,
@@ -379,6 +410,7 @@ const items = [
   {
     item_id: "16",
     saved: false,
+    video:video1,
     location: "Lavington",
     name: "Lavington family deluxe",
     type: "family",
@@ -410,6 +442,7 @@ const items = [
     size: 5500,
     capacity: 3,
     pets: false,
+    video:video2,
     featured: false,
     description:
       "This 3-bedroom apartment in Kileleshwa has a separate bathroom and a separate bedroom with the  kitchen  separate from the living room, ",
@@ -432,6 +465,7 @@ const items = [
     type: "family",
     price: 40000,
     size: 5500,
+    video:video13,
     capacity: 3,
     pets: false,
     featured: false,
@@ -451,6 +485,7 @@ const items = [
   {
     item_id: "19",
     saved: false,
+    video:video3,
     location: "Lavington",
     name: "Lavington executive ",
     type: "executive",
@@ -475,6 +510,7 @@ const items = [
   {
     item_id: "20",
     saved: false,
+   video:video2,
     location: "Kileleshwa",
     name: "Kileleshwa executive ",
     type: "executive",
@@ -504,6 +540,7 @@ const items = [
     type: "executive",
     price: 45000,
     size: 6000,
+    video:video5,
     capacity: 4,
     pets: false,
     featured: false,
@@ -523,6 +560,7 @@ const items = [
   {
     item_id: "22",
     saved: false,
+    video:video8,
     location: "Lavington",
     name: "Lavington Premium",
     type: "premium",
@@ -548,6 +586,7 @@ const items = [
     item_id: "23",
     saved: false,
     location: "Kileleshwa",
+    video:video9,
     name: "Kileleshwa  Premium",
     type: "premium",
     price: 50000,
@@ -576,6 +615,7 @@ const items = [
     type: "premium",
     price: 50000,
     size: 6000,
+    video:video12,
     capacity: 5,
     pets: false,
     featured: false,
