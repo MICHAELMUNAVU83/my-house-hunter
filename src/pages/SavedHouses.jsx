@@ -3,7 +3,9 @@ import { RoomContext } from '../context'
 import { Link } from "react-router-dom";
 
 
+
 function SavedHouses() {
+  
   const { saved } = useContext(RoomContext)
   const result = saved.filter((thing, index, self) =>
     index === self.findIndex((t) => (
@@ -16,7 +18,13 @@ function SavedHouses() {
 
     return (
       <div key="no-houses" className="no-houses-div">
+        <div>
         <h3>NO HOUSES SAVED YET</h3></div>
+        
+
+
+        </div>
+      
 
     )
   }
@@ -43,6 +51,7 @@ function SavedHouses() {
                 <span>{save.name}</span>
               </div>
             </div>
+            <button id={save.item_id}>Remove</button>
           </div>
 
         ))}

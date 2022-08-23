@@ -7,9 +7,10 @@ export function RoomProvider ({children}){
     const addCart =(obj)=>{
       setSaved((prevState)=>[...prevState,obj])
     }
+    
 
     return(
-        <RoomContext.Provider value={{saved, addCart}}>
+        <RoomContext.Provider value={{saved, addCart }}>
             {children}
 
         </RoomContext.Provider>
